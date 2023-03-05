@@ -46,6 +46,13 @@ stage(" Docker Build ") {
                echo '<--------------- Docker Publish Ended --------------->'  
             }
         }
-    }  
+    }
+            stage('Deployment') {
+            steps {
+                echo '<--------------- deployment started  --------------->'
+                sh './deploy.sh'
+                echo '<------------- deployment stopped  --------------->'
+            }
+        }  
     }
     }
