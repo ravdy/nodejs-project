@@ -16,7 +16,7 @@ spec:
       - name: jfrogauth 
       containers:
       - name:  nodejs-demo
-        image: valaxy02.jfrog.io/nodejs-docker/demo-nodejs:1.0.0
+        image: valaxy02.jfrog.io/nodejs-docker/demo-nodejs:1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

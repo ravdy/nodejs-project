@@ -1,6 +1,6 @@
 def registry = 'https://valaxy02.jfrog.io'
 def imageName = 'valaxy02.jfrog.io/nodejs-docker/demo-nodejs'
-def version   = '1.0.0'
+def version   = '1.0.1'
 pipeline{
     agent {
         node {
