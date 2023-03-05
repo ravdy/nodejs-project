@@ -10,11 +10,6 @@ pipeline{
     tools {nodejs 'nodejs-16'}
 
     stages {
-       stage('checkoutcode'){
-            steps {
-	            git 'https://github.com/wardviaene/docker-demo.git'
-	       }
-	    }
         stage('build') {
             steps{
                 echo "------------ build started ---------"
