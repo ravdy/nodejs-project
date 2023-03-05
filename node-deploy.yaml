@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app:  nodejs-demo
+  template:
+    metadata:
+      labels:
+        app:  nodejs-demo
+    spec:
+      imagePullSecrets:
+      - name: jfrogauth 
+      containers:
+      - name:  nodejs-demo
+        image: valaxy02.jfrog.io/nodejs-docker/demo-nodejs:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
